@@ -53,18 +53,20 @@ const AntdTable = ({
 
     return (
         <div className={styles.mainContainer}>
-            <Table
-                rowSelection={rowSelection}
-                columns={columns}
-                dataSource={dataSource}
-                rowClassName={rowClassName}
-                pagination={{ position: ["none", "none",],pageSize:20 }}
-                scroll={{
-                    x: 1200,
-                    // y: 400,
-                }}
-                {...rest}
-            />
+            <div className={styles.tableContainer}>
+                <Table
+                    rowSelection={rowSelection}
+                    columns={columns}
+                    dataSource={dataSource}
+                    rowClassName={rowClassName}
+                    pagination={{ position: ["none", "none",],pageSize:20 }}
+                    scroll={{
+                        x: 1200,
+                        // y: 400,
+                    }}
+                    {...rest}
+                />
+            </div>
             <Pagination
                 defaultCurrent={1} total={50}
             />
