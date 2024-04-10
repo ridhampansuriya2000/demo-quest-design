@@ -252,19 +252,19 @@ const Dashboard = () =>{
                     <span className={styles.titleSubText}>(총 100명 | 승인대기 1건)</span>
                 </div>
                 <div className={styles.filterBox}>
-                    <Select options={options1} defaultValue='승인여부 전체' autoResponsiveWidth={820}/>
-                    <Select options={options2} defaultValue='신청일시순' autoResponsiveWidth={820}/>
-                    <Select options={options3} defaultValue='' autoResponsiveWidth={820}/>
+                    <Select options={options1} defaultValue='승인여부 전체' autoResponsiveWidth={820} width={150}/>
+                    <Select options={options2} defaultValue='신청일시순' autoResponsiveWidth={820} width={150}/>
+                    <Select options={options3} defaultValue='' autoResponsiveWidth={820} width={150}/>
                 </div>
             </div>
             <div className={styles.header2}>
                 <div>
-                    <Button type='primary' width='' text='등록' onClick={()=>setOpenModal((preState)=>!preState)} autoResponsiveWidth={820}/>
+                    <Button type='primary' width={100} text='등록' onClick={()=>setOpenModal((preState)=>!preState)} autoResponsiveWidth={820}/>
                 </div>
                 <div className={styles.filterBox}>
                     <Button type='text'>선택한 0건</Button>
-                    <Select options={options4} defaultValue='승인상태 변경' autoResponsiveWidth={820}/>
-                    <Button type='primary' text='등록' autoResponsiveWidth={820}/>
+                    <Select options={options4} defaultValue='승인상태 변경' autoResponsiveWidth={820} width={150}/>
+                    <Button type='primary' text='등록' autoResponsiveWidth={820} width={100}/>
                 </div>
             </div>
             <Table
