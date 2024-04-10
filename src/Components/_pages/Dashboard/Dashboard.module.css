@@ -1,0 +1,240 @@
+.mainContainer{
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+}
+
+.headerBox{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.pageTitleText{
+    font-family: Pretendard;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 23.87px;
+    text-align: left;
+}
+
+.divider{
+    height: 1px;
+    width: 100%;
+    background: #D7D8DA;
+}
+
+.header1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D7D8DA;
+}
+
+.header2{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.titleText{
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.87px;
+    text-align: left;
+}
+
+.titleSubText{
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.71px;
+    text-align: left;
+}
+
+.filterBox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modalBody{
+    width: 100%;
+    padding: 10px 15px;
+    /*border-top: 1px solid #B1B4BB;*/
+    /*border-bottom: 1px solid #B1B4BB;*/
+}
+
+.modalFooter{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    gap: 10px;
+}
+
+.dataInfoBox{
+    width: 100%;
+    border: 1px solid #D7D8DA;
+}
+
+.fieldRow{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.labelBox{
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    background: #EBEEF3;
+    min-height: 49px;
+    width: 25%;
+
+}
+
+.labelBoxDivider{
+    border-bottom: 1px solid #fff;
+}
+
+.valueBox{
+    flex: 1;
+    min-height: 49px;
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+}
+
+.valueBoxDivider{
+    border-bottom: 1px solid #EBEEF3;
+}
+
+.styledUL{
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.reasonBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.leaveInfoBox{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.docFieldRow{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.docInfoBox{
+    width: 100%;
+    border: 1px solid #D7D8DA;
+    border-radius: 10px;
+}
+
+.docLabelBox{
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    background: #EBEEF3;
+    min-height: 500px;
+    width: 25%;
+    border-radius: 10px 0 0 10px;
+}
+
+.docValueBox{
+    flex: 1;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: auto;
+    align-items: center;
+    padding: 7px 10px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.docBox{
+    width: 100%;
+    height: 450px;
+    background: #FAFAFA;
+    border: 1px solid #D7D8DA;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalMsg{
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.buttonBox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 520px) {
+    .modalBody{
+        width: 100%;
+        padding: 5px 8px;
+    }
+
+    .fieldRow {
+        display: flex;
+        flex-direction: column;
+    }
+    .labelBox{
+        width: 100%;
+        min-height: 29px;
+    }
+    .valueBox{
+        width: 100%;
+        min-height: 29px;
+    }
+    .valueBoxDivider{
+        border: none;
+    }
+    .labelBoxDivider{
+        border: none;
+    }
+    .leaveInfoBox{
+        flex-direction: column;
+    }
+    .docLabelBox{
+        width: 15%;
+    }
+
+    .header1{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header1{
+        flex-direction: column;
+    }
+    .header2{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+}

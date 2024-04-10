@@ -1,0 +1,57 @@
+.navContainer{
+    width: fit-content;
+    display: flex;
+    background: #EBEEF3;
+    border-radius: 8px;
+}
+
+.mainContainer{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.mainContainer::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.mainContainer::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.navItem{
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-wrap:nowrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+.selectedNavItem{
+    background: #2A3958;
+    color: #fff;
+}
+
+.firstSelectedItem {
+    border-top-left-radius: 10px; /* Adjust the border radius value as needed */
+    border-bottom-left-radius: 10px; /* Adjust the border radius value as needed */
+}
+
+.lastSelectedItem {
+    border-top-right-radius: 10px; /* Adjust the border radius value as needed */
+    border-bottom-right-radius: 10px; /* Adjust the border radius value as needed */
+}
+
+/* Media queries for mobile and tablet responsiveness */
+@media screen and (max-width: 820px) {
+    .navItem {
+        height:35px;
+        width: auto;
+        padding: 5px 10px; /* Adjust padding for smaller screens */
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}

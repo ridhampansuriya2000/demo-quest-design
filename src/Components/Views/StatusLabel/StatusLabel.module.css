@@ -1,0 +1,25 @@
+.label{
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 2px 10px;
+    width: fit-content;
+    min-width: 69px;
+    display: flex;
+    justify-content: center;
+}
+
+.success{
+    color: #166534;
+    background: #DCFCE7;
+}
+
+.warning{
+    color: #9A3412;
+    background: #FFEDD5;
+}
+
+.error{
+    color: #991B1B;
+    background: #FEE2E2;
+}
+
