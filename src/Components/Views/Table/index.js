@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Table} from 'antd';
 import styles from './Table.module.css';
 import Pagination from "../Pagination";
+import PrevToStartIcon from "../../../Assets/Icons/PrevToStartIcon";
 
 
 const columns = [
@@ -51,18 +52,21 @@ const AntdTable = ({
     };
 
     return (
-        <div>
+        <div className={styles.mainContainer}>
             <Table
                 rowSelection={rowSelection}
                 columns={columns}
                 dataSource={dataSource}
                 rowClassName={rowClassName}
-                pagination={{ position: ["", "bottomCenter"],pageSize:20 }}
+                pagination={{ position: ["none", "none",],pageSize:20 }}
                 scroll={{
                     x: 1200,
                     // y: 400,
                 }}
                 {...rest}
+            />
+            <Pagination
+                defaultCurrent={1} total={50}
             />
         </div>
     );};

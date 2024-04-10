@@ -1,29 +1,37 @@
-import React, { useState } from 'react';
-import { ConfigProvider, Pagination as AntdPagination} from 'antd';
+import React from 'react';
+import { Pagination as AntdPagination} from 'antd';
 import styles from './Pagination.module.css';
+import PrevToStartIcon from "../../../Assets/Icons/PrevToStartIcon";
+import PrevIcon from "../../../Assets/Icons/PrevIcon";
+import NextIcon from "../../../Assets/Icons/NextIcon";
+import NextToEndIcon from "../../../Assets/Icons/NextToEndIcon";
 
 
 const Pagination = ({
-                       columns,
-                       dataSource,
-                       rowSelection,
+                        defaultCurrent,
+                        onChange=()=>{},
+                        ...rest
                    }) =>{
-
+    const [current,setCurrent] = React.useState(defaultCurrent);
 
 
     return (
         <div>
-            <ConfigProvider theme={{
-                token: {
-                    colorBorder:'#0800d9',
-                    colorPrimaryBorder:'#4e1ad9',
-                //     colorPrimary: '#2A3958',
-                //     // headerBg: '#EEF0F4',
-                //     // fontWeightStrong: 800
-                },
-            }}>
-                <AntdPagination defaultCurrent={1} total={50} />
-            </ConfigProvider>
+                <AntdPagination
+                    itemRender={(value, type, defaultComponent)=>{
+                        if (type === 'prev') {
+                            return <a className={styles.prevIcons}><PrevToStartIcon /><PrevIcon /></a>;
+                        }
+                        if (type === 'next') {
+                            return <a className={styles.nextIcons}><NextIcon /><NextToEndIcon /></a>;
+                        }
+                        return <div className={`${current === value ? styles.currentPageNumber : styles.pageNumber}`}>{value}</div>;
+                    }}
+                    onChange={(page, pageSize)=>{
+                        setCurrent(page);
+                        onChange(page, pageSize);
+                    }}
+                    {...rest}/>
         </div>
     );};
 

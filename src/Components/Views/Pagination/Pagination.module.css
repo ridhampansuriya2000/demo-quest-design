@@ -1,5 +1,29 @@
 
 
-.even-row {
-    background-color: #F9F9FB; /* Change background color for even index rows */
+.prevIcons{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.nextIcons{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.currentPageNumber{
+    background: #2a3958;
+    color: white;
+    border-radius: 4px;
+    border-color: #2a3958;
+}
+
+.pageNumber{
+    color: #2a3958;
+    border-radius: 4px;
 }
